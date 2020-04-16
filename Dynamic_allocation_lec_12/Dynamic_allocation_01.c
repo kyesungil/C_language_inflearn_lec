@@ -22,7 +22,7 @@ int main()
 
 	// heap에 동적 메모리 할당	
 	char* ptr = (char*)malloc(n * sizeof(char));
-	printf("동적메모리 할당 후 : %p\n", ptr);
+	printf("동적메모리 할당 후 : %p\n", ptr); // 출력 : 주소 AAAAAA (가정)
 
 	// 메모리 할당 실패할 경우 NULL 반환
 	if (ptr == NULL)
@@ -32,11 +32,11 @@ int main()
 
 	// 메모리 회수
 	free(ptr);
-	printf("free() 메모리 회수 후 : %p\n", ptr);
+	printf("free() 메모리 회수 후 : %p\n", ptr); // 출력 : 주소 AAAAAA
 
 	// 포인터 변수 = null
 	ptr = NULL;
-	printf("ptr = NULL 후 : %p\n", ptr);
+	printf("ptr = NULL 후 : %p\n", ptr); // 출력 : 주소 000000
 
 	
 	return 0;
